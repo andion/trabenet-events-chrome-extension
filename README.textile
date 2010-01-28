@@ -4,8 +4,8 @@ A Chrome extension to track Trabe intranet event's from chrome like unread email
 
 h2. Notes
 
-*Version:* 1.1
-By now it _only_ works on my local environment.
+*Version:* 1.2
+Using the production environment (but don't hurry, you must be Trabe Soluciones staff :/)
 
 h2. Who may I blame?
 

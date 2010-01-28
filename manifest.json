@@ -1,17 +1,17 @@
 {
   "name": "Trabenet events",
-  "version": "1.1",
+  "version": "1.2",
   "background_page": "background.html",
   "description": "Get Trabe intranet event's right on your browser.",
   "icons": {
     "128" : "icon_128.png"
   },
   "browser_action": {
-    "default_icon": "tb3.png"
+    "default_icon": "trabe_not_logged_in.png"
   },
   "permissions": [
     "tabs",
-    "http://events.trabenet.local/*"
+    "https://events.trabesoluciones.net/*"
   ]
 }
 
