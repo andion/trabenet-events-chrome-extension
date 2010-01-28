@@ -1,0 +1,4 @@
+h2. Long story short...
+
+A Chrome extension to track Trabe intranet event's from chrome like unread enail count from gmail
+
