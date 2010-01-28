@@ -1,4 +1,8 @@
-h2. Long story short...
+h2. What's this?
 
-A Chrome extension to track Trabe intranet event's from chrome like unread enail count from gmail
+A Chrome extension to track Trabe intranet event's from chrome like unread enail count from gmail (in case it's name confuses you ¬¬)
+
+h2. Who may I blame?
+
+lucas (dot) andion (at) trabesoluciones.com
 
