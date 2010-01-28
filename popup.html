@@ -1,0 +1,43 @@
+<style>
+body {
+  min-width:357px;
+  overflow-x:hidden;
+}
+
+img {
+  margin:5px;
+  border:2px solid black;
+  vertical-align:middle;
+  width:75px;
+  height:75px;
+}
+
+h1 {
+  font-size:1em;
+  font-family:Arial;
+}
+</style>
+
+<script>
+var req = new XMLHttpRequest();
+req.open(
+    "GET",
+    "http://localhost/events.js",
+    true);
+req.onload = showEvents;
+req.send(null);
+
+function showEvents() {
+  var events = req.responseXML.getElementsByClassName("event_title");
+
+  for (var i = 0, event; event = events[i]; i++) {
+    var chrome_event = "event";
+    var newDiv = document.createElement("div");
+    newDiv.innerHTML = "<h1>Hi there and greetings!</h1>";
+    document.body.appendChild(newDiv);
+  }
+}
+</script>
+
+<h1>Trabenet events</h1>
+
