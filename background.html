@@ -7,7 +7,7 @@ var animationSpeed = 10; // ms
 var canvas;
 var canvasContext;
 var loggedInImage;
-var pollIntervalMin = 1000 * 60;  // 1 minute
+var pollIntervalMin = 1000 * 30;  // 30 sec (half than gmail's one)
 var pollIntervalMax = 1000 * 60 * 60;  // 1 hour
 var requestFailureCount = 0;  // used for exponential backoff
 var requestTimeout = 1000 * 2;  // 5 seconds
@@ -16,12 +16,12 @@ var unreadCount = -1;
 var loadingAnimation = new LoadingAnimation();
 
 function getTrabeUrl() {
-  var url = "http://events.trabesoluciones.net/";
+  var url = "https://events.trabesoluciones.net/";
   return url;
 }
 
 function getFeedUrl() {
-  return getTrabeUrl() + "count";
+  return "http://events.trabesoluciones.net/count";
 }
 
 function isTrabeUrl(url) {
