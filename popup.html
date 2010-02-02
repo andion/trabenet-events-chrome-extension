@@ -1,43 +1,74 @@
 <style>
+
+li {}
+
 body {
-  min-width:357px;
+  min-width:500px;
   overflow-x:hidden;
+  color:#333;
+  margin:0;
+  padding:0;
 }
 
-img {
-  margin:5px;
-  border:2px solid black;
-  vertical-align:middle;
-  width:75px;
-  height:75px;
-}
 
 h1 {
   font-size:1em;
-  font-family:Arial;
+  font-family:Verdana;
+  }
+
+.menu {float:right;}
+
+.menu a { text-decoration:none;color:#9FAF35;}
+
+.row1 {background:#eee;}
+
+.event { padding: 5px;
+         margin-top:5px;
+         font-size:0.8em;
+         font-family:Verdana;
+        -webkit-border-radius:5px; border:1px solid #ddd;}
+
+.image { float:left;
+         margin-right:5px;
+         margin-top:-3px;
+         vertical-align:top;
+         -webkit-border-radius:5px;
+         background: #ddd;
+         padding:3px;}
+
+.created_at { font-weight: bold;}
+
+.source_badge {
+  display:inline-block;
+  background:silver;
+  padding:1px 3px;
 }
+
+.trabe_exceptions {
+  background:#990000 !important;
+}
+
+.trabe_work {
+  background:#EA9E28 !important;
+}
+
+.info {
+  font-size:1.1em;
+}
+
+.event_description {
+  font-family:monospaced;
+}
+
 </style>
 
-<script>
-var req = new XMLHttpRequest();
-req.open(
-    "GET",
-    "http://localhost/events.js",
-    true);
-req.onload = showEvents;
-req.send(null);
 
-function showEvents() {
-  var events = req.responseXML.getElementsByClassName("event_title");
+<div class="menu">
+  <a href="http://events.trabenet.local" target="_blank">todos</a>
+  |
+  <a href="/" target="_self">refrescar</a>
+</div>
+<!-- all the stuff happens on the server -->
 
-  for (var i = 0, event; event = events[i]; i++) {
-    var chrome_event = "event";
-    var newDiv = document.createElement("div");
-    newDiv.innerHTML = "<h1>Hi there and greetings!</h1>";
-    document.body.appendChild(newDiv);
-  }
-}
-</script>
-
-<h1>Trabenet events</h1>
+<script src="http://events.trabenet.local/new_events.js"></script>
 
