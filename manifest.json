@@ -1,7 +1,7 @@
 {
   "name": "Trabenet events",
   "version": "1.5",
-  "update_url": "http://github.com/andion/trabenet-events-chrome-extension/raw/master/updates.xml"
+  "update_url": "http://dl.dropbox.com/u/453527/trabenet-chrome/updates.xml",
   "background_page": "background.html",
   "description": "Get Trabe intranet event's right on your browser.",
   "icons": {

@@ -1,7 +1,0 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<gupdate xmlns='http://www.google.com/update2/response' protocol='2.0'>
-  <app appid='bofnbiggojkbaaljfgahcdeohlnnifcm'>
-    <updatecheck codebase='http://github.com/andion/trabenet-events-chrome-extension/raw/master/install/trabebet-events-chrome-extension.crx' version='2.0' />
-  </app>
-</gupdate>
-
