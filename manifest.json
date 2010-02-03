@@ -1,6 +1,6 @@
 {
   "name": "Trabenet events",
-  "version": "1.4",
+  "version": "1.5",
   "background_page": "background.html",
   "description": "Get Trabe intranet event's right on your browser.",
   "icons": {
