@@ -1,9 +1,39 @@
+<script src="commons.js"></script>
+
+<script>
+function openTab(tabUrl) {
+  var button = event.button;
+  if(button > 1)
+    return;
+  var selected = true;
+  if(button == 1 || event.ctrlKey) // Middle Button or Ctrl click
+    selected = false;
+  chrome.tabs.create({ url: tabUrl, selected: selected });
+}
+
+function goToEvents() {
+  chrome.tabs.getAllInWindow(undefined, function(tabs) {
+    for (var i = 0, tab; tab = tabs[i]; i++) {
+      if (tab.url && isEventsUrl(tab.url)) {
+        chrome.tabs.update(tab.id, {selected: true});
+        window.close();
+        return;
+      }
+    }
+    window.close();
+    chrome.tabs.create({url: getEventsUrl()});
+  });
+}
+
+</script>
+
 <style>
 
 li {}
 
 body {
-  min-width:350px;
+  width:500px;
+  max-height:600px;
   overflow-x:hidden;
   color:#333;
   margin:0;
@@ -22,8 +52,7 @@ h1 {
 
 .row1 {background:#eee;}
 
-.event { min-width:500px;
-         padding: 5px;
+.event { padding: 5px;
          margin-top:5px;
          font-size:0.8em;
          font-family:Verdana;
@@ -65,11 +94,14 @@ h1 {
 
 
 <div class="menu">
-  <a href="http://events.trabenet.local" target="_self">todos</a>
+  <a href="#" onclick="javascript:goToEvents();">todos</a>
   |
-  <a href="/" target="_self">refrescar</a>
+  <a href="#" onclick="javascript:window.location.reload()">refrescar</a>
+  |
+  <a href="#" onclick="javascript:window.close()"> cerrar </a>
 </div>
+
 <!-- all the stuff happens on the server -->
 
-<script src="http://events.trabesoluciones.com/new_events.js"></script>
+<script src="http://events.trabesoluciones.net/new_events.js"></script>
 
