@@ -1,6 +1,6 @@
 {
   "name": "Trabenet events",
-  "version": "1.5",
+  "version": "1.6",
   "update_url": "http://dl.dropbox.com/u/453527/trabenet-chrome/updates.xml",
   "background_page": "background.html",
   "description": "Get Trabe intranet event's right on your browser.",

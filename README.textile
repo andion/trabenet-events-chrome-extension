@@ -4,8 +4,10 @@ A Chrome extension to track Trabe intranet event's from chrome like unread email
 
 h2. Notes
 
+*Version:*1-6
+Auto-update feature, files stored on dropbox.
 *Version:* 1.5
-New_events popup refirbishing with menu links, extracted js functionality
+New_events popup refurbishing with menu links, extracted js functionality
 *Version:* 1.4
 Added popup.html with new events
 *Version:* 1.2
