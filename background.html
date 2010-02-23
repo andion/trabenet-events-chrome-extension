@@ -137,7 +137,7 @@ function getInboxCount(onSuccess, onError) {
       if (xhr.responseXML) {
         var xmlDoc = xhr.responseXML;
         var fullCountSet = xmlDoc.evaluate("/trabe:feed/trabe:count",
-            xmlDoc, gmailNSResolver, XPathResult.ANY_TYPE, null);
+            xmlDoc, NSResolver, XPathResult.ANY_TYPE, null);
         var fullCountNode = fullCountSet.iterateNext();
         if (fullCountNode) {
           handleSuccess(fullCountNode.textContent);
@@ -162,7 +162,7 @@ function getInboxCount(onSuccess, onError) {
   }
 }
 
-function gmailNSResolver(prefix) {
+function NSResolver(prefix) {
   if(prefix == 'trabe') {
     return 'http://www.w3.org/2005/Atom';
   }
@@ -172,7 +172,21 @@ function updateUnreadCount(count) {
   if (unreadCount != count) {
     unreadCount = count;
     animateFlip();
+  update_title(count);
+}
+
+function update_title(count) {
+  var title_text = ""
+  if (count == 0) {
+    title_text = "Sin eventos"
   }
+  else if (count == 1) {
+    title_text = "1 Evento"
+  }
+  else {
+    title_text = count + " Eventos"
+  }
+  chrome.browserAction.setTitle({title: title_text});
 }
 
 
@@ -238,9 +252,9 @@ chrome.browserAction.onClicked.addListener(function(tab) {
 
 </script>
 </head>
-<body onload="init()">
-<img id="logged_in" src="trabe_logged_in.png">
-<canvas id="canvas" width="19" height="19">
+<body onload="init();">
+  <img id="logged_in" src="trabe_logged_in.png">
+  <canvas id="canvas" width="19" height="19">
 </body>
 </html>
 

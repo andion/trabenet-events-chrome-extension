@@ -1,6 +1,6 @@
 {
   "name": "Trabenet events",
-  "version": "1.7",
+  "version": "1.8",
   "update_url": "http://dl.dropbox.com/u/453527/trabenet-chrome/updates.xml",
   "background_page": "background.html",
   "description": "Get Trabe intranet event's right on your browser.",
@@ -8,6 +8,7 @@
     "128" : "icon_128.png"
   },
   "browser_action": {
+    "default_title": "Trabenet events",
     "default_icon": "trabe_not_logged_in.png",
     "popup": "popup.html"
   },
