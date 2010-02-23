@@ -172,6 +172,7 @@ function updateUnreadCount(count) {
   if (unreadCount != count) {
     unreadCount = count;
     animateFlip();
+  }
   update_title(count);
 }
 
@@ -252,7 +253,7 @@ chrome.browserAction.onClicked.addListener(function(tab) {
 
 </script>
 </head>
-<body onload="init();">
+<body onload="init()">
   <img id="logged_in" src="trabe_logged_in.png">
   <canvas id="canvas" width="19" height="19">
 </body>
