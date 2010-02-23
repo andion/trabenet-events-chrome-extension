@@ -8,7 +8,7 @@
     "128" : "icon_128.png"
   },
   "browser_action": {
-    "default_title": "Trabenet events",
+    "default_title": "Events on trabe",
     "default_icon": "trabe_not_logged_in.png",
     "popup": "popup.html"
   },
